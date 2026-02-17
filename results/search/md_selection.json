@@ -1,0 +1,127 @@
+{
+  "variants": [
+    {
+      "id": "var_043",
+      "mutations": {
+        "182": "K",
+        "209": "L"
+      },
+      "num_mutations": 2,
+      "score": 7.156139251445255,
+      "group": "active",
+      "sequence": "TNPYARGPNPTAASLEASAGPFTVRSFTVSRPSGYGAGTVYYPTNAGGTVGAIAIVPGYTARQSSIKWWGPRLASHGFVVITIDTNSTLDQPSSRSSQQMAALRQVASLNGTSSSPIYGKVDTARMGVMGWSMGGGGSLISAANNPSLKAAAPQAPWDSSTNFSSVTVPTLIFACENDSIAPVNSSALPIYDSMSRNAKQFLEINGGSHSCANSGNSNQALIGKKGVAWMKRFMDNDTRYSTFACENPNSTRVSDFRTANCSLEH",
+      "pdb_file": "results/search/structures_esm/active_var_043.pdb",
+      "folded": true,
+      "structure_metrics": {
+        "radius_of_gyration": 16.378395080566406,
+        "contact_density": 81.80377358490566,
+        "mean_ca_distance": 21.683996869542444,
+        "std_ca_distance": 8.266811243380962,
+        "mean_bfactor": 0.9332452830188679,
+        "std_bfactor": 0.07537100830454922,
+        "clash_count": 266
+      },
+      "stability_score": 28.92304539760374,
+      "combined_score": 1.0257051761663918
+    },
+    {
+      "id": "var_044",
+      "mutations": {
+        "208": "G",
+        "184": "V",
+        "209": "K"
+      },
+      "num_mutations": 3,
+      "score": 7.137149427686155,
+      "group": "active",
+      "sequence": "TNPYARGPNPTAASLEASAGPFTVRSFTVSRPSGYGAGTVYYPTNAGGTVGAIAIVPGYTARQSSIKWWGPRLASHGFVVITIDTNSTLDQPSSRSSQQMAALRQVASLNGTSSSPIYGKVDTARMGVMGWSMGGGGSLISAANNPSLKAAAPQAPWDSSTNFSSVTVPTLIFACENDSIAPVNSSALPIYDSMSRNAKQFLEINGGSHSCANSGNSNQALIGKKGVAWMKRFMDNDTRYSTFACENPNSTRVSDFRTANCSLEH",
+      "pdb_file": "results/search/structures_esm/active_var_044.pdb",
+      "folded": true,
+      "structure_metrics": {
+        "radius_of_gyration": 16.378395080566406,
+        "contact_density": 81.80377358490566,
+        "mean_ca_distance": 21.683996869542444,
+        "std_ca_distance": 8.266811243380962,
+        "mean_bfactor": 0.9332452830188679,
+        "std_bfactor": 0.07537100830454922,
+        "clash_count": 266
+      },
+      "stability_score": 28.92304539760374,
+      "combined_score": 1.0230466008401178
+    },
+    {
+      "id": "var_015",
+      "mutations": {
+        "203": "L",
+        "184": "E"
+      },
+      "num_mutations": 2,
+      "score": 6.98116246735391,
+      "group": "active",
+      "sequence": "TNPYARGPNPTAASLEASAGPFTVRSFTVSRPSGYGAGTVYYPTNAGGTVGAIAIVPGYTARQSSIKWWGPRLASHGFVVITIDTNSTLDQPSSRSSQQMAALRQVASLNGTSSSPIYGKVDTARMGVMGWSMGGGGSLISAANNPSLKAAAPQAPWDSSTNFSSVTVPTLIFACENDSIAPVNSSALPIYDSMSRNAKQFLEINGGSHSCANSGNSNQALIGKKGVAWMKRFMDNDTRYSTFACENPNSTRVSDFRTANCSLEH",
+      "pdb_file": "results/search/structures_esm/active_var_015.pdb",
+      "folded": true,
+      "structure_metrics": {
+        "radius_of_gyration": 16.378395080566406,
+        "contact_density": 81.80377358490566,
+        "mean_ca_distance": 21.683996869542444,
+        "std_ca_distance": 8.266811243380962,
+        "mean_bfactor": 0.9332452830188679,
+        "std_bfactor": 0.07537100830454922,
+        "clash_count": 266
+      },
+      "stability_score": 28.92304539760374,
+      "combined_score": 1.0012084263936034
+    },
+    {
+      "id": "var_018",
+      "mutations": {
+        "145": "Y",
+        "35": "I",
+        "33": "W"
+      },
+      "num_mutations": 3,
+      "score": 8.167106641650886,
+      "group": "allosteric",
+      "sequence": "TNPYARGPNPTAASLEASAGPFTVRSFTVSRPSGYGAGTVYYPTNAGGTVGAIAIVPGYTARQSSIKWWGPRLASHGFVVITIDTNSTLDQPSSRSSQQMAALRQVASLNGTSSSPIYGKVDTARMGVMGWSMGGGGSLISAANNPSLKAAAPQAPWDSSTNFSSVTVPTLIFACENDSIAPVNSSALPIYDSMSRNAKQFLEINGGSHSCANSGNSNQALIGKKGVAWMKRFMDNDTRYSTFACENPNSTRVSDFRTANCSLEH",
+      "pdb_file": "results/search/structures_esm/allosteric_var_018.pdb",
+      "folded": true,
+      "structure_metrics": {
+        "radius_of_gyration": 16.378395080566406,
+        "contact_density": 81.80377358490566,
+        "mean_ca_distance": 21.683996869542444,
+        "std_ca_distance": 8.266811243380962,
+        "mean_bfactor": 0.9332452830188679,
+        "std_bfactor": 0.07537100830454922,
+        "clash_count": 266
+      },
+      "stability_score": 28.92304539760374,
+      "combined_score": 1.16724061079518
+    },
+    {
+      "id": "var_040",
+      "mutations": {
+        "59": "L",
+        "33": "Q"
+      },
+      "num_mutations": 2,
+      "score": 7.583252674621137,
+      "group": "allosteric",
+      "sequence": "TNPYARGPNPTAASLEASAGPFTVRSFTVSRPSGYGAGTVYYPTNAGGTVGAIAIVPGYTARQSSIKWWGPRLASHGFVVITIDTNSTLDQPSSRSSQQMAALRQVASLNGTSSSPIYGKVDTARMGVMGWSMGGGGSLISAANNPSLKAAAPQAPWDSSTNFSSVTVPTLIFACENDSIAPVNSSALPIYDSMSRNAKQFLEINGGSHSCANSGNSNQALIGKKGVAWMKRFMDNDTRYSTFACENPNSTRVSDFRTANCSLEH",
+      "pdb_file": "results/search/structures_esm/allosteric_var_040.pdb",
+      "folded": true,
+      "structure_metrics": {
+        "radius_of_gyration": 16.378395080566406,
+        "contact_density": 81.80377358490566,
+        "mean_ca_distance": 21.683996869542444,
+        "std_ca_distance": 8.266811243380962,
+        "mean_bfactor": 0.9332452830188679,
+        "std_bfactor": 0.07537100830454922,
+        "clash_count": 266
+      },
+      "stability_score": 28.92304539760374,
+      "combined_score": 1.0855010554110152
+    }
+  ],
+  "selection_criteria": "Top by combined affinity + stability score"
+}

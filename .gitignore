@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# Data (too large for git)
+data/raw/
+data/graphs/
+*.pt
+*.pdb
+
+# Results (can regenerate)
+results/models/affinity/*/best_model.pt
+results/validation/md/
+
+# Logs
+*.log
+nohup.out
+
+# Environment
+.env
+*.swp

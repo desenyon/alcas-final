@@ -1,0 +1,1037 @@
+{
+  "active_site": {
+    "variants": [
+      {
+        "id": "var_043",
+        "mutations": {
+          "182": "K",
+          "209": "L"
+        },
+        "num_mutations": 2,
+        "score": 7.156139251445255,
+        "group": "active_site"
+      },
+      {
+        "id": "var_044",
+        "mutations": {
+          "208": "G",
+          "184": "V",
+          "209": "K"
+        },
+        "num_mutations": 3,
+        "score": 7.137149427686155,
+        "group": "active_site"
+      },
+      {
+        "id": "var_015",
+        "mutations": {
+          "203": "L",
+          "184": "E"
+        },
+        "num_mutations": 2,
+        "score": 6.98116246735391,
+        "group": "active_site"
+      },
+      {
+        "id": "var_012",
+        "mutations": {
+          "210": "I",
+          "203": "E",
+          "239": "D"
+        },
+        "num_mutations": 3,
+        "score": 6.919302506422397,
+        "group": "active_site"
+      },
+      {
+        "id": "var_023",
+        "mutations": {
+          "183": "W"
+        },
+        "num_mutations": 1,
+        "score": 6.856551181522627,
+        "group": "active_site"
+      },
+      {
+        "id": "var_045",
+        "mutations": {
+          "239": "I",
+          "207": "F"
+        },
+        "num_mutations": 2,
+        "score": 6.85115914140124,
+        "group": "active_site"
+      },
+      {
+        "id": "var_010",
+        "mutations": {
+          "202": "Y",
+          "159": "F",
+          "208": "R"
+        },
+        "num_mutations": 3,
+        "score": 6.789906974539497,
+        "group": "active_site"
+      },
+      {
+        "id": "var_004",
+        "mutations": {
+          "209": "A"
+        },
+        "num_mutations": 1,
+        "score": 6.719620620096148,
+        "group": "active_site"
+      },
+      {
+        "id": "var_006",
+        "mutations": {
+          "210": "A",
+          "202": "H"
+        },
+        "num_mutations": 2,
+        "score": 6.693691782390869,
+        "group": "active_site"
+      },
+      {
+        "id": "var_026",
+        "mutations": {
+          "208": "Y",
+          "209": "A",
+          "202": "F"
+        },
+        "num_mutations": 3,
+        "score": 6.610755410889945,
+        "group": "active_site"
+      },
+      {
+        "id": "var_036",
+        "mutations": {
+          "183": "S",
+          "202": "I",
+          "209": "Y"
+        },
+        "num_mutations": 3,
+        "score": 6.587830700048026,
+        "group": "active_site"
+      },
+      {
+        "id": "var_017",
+        "mutations": {
+          "202": "Y",
+          "236": "K"
+        },
+        "num_mutations": 2,
+        "score": 6.5225462158553915,
+        "group": "active_site"
+      },
+      {
+        "id": "var_001",
+        "mutations": {
+          "182": "K",
+          "159": "K",
+          "202": "G"
+        },
+        "num_mutations": 3,
+        "score": 6.486932111304021,
+        "group": "active_site"
+      },
+      {
+        "id": "var_033",
+        "mutations": {
+          "159": "K"
+        },
+        "num_mutations": 1,
+        "score": 6.476006488813756,
+        "group": "active_site"
+      },
+      {
+        "id": "var_003",
+        "mutations": {
+          "182": "I"
+        },
+        "num_mutations": 1,
+        "score": 6.393155253003692,
+        "group": "active_site"
+      },
+      {
+        "id": "var_032",
+        "mutations": {
+          "159": "Q",
+          "182": "M"
+        },
+        "num_mutations": 2,
+        "score": 6.389953750698364,
+        "group": "active_site"
+      },
+      {
+        "id": "var_035",
+        "mutations": {
+          "236": "V"
+        },
+        "num_mutations": 1,
+        "score": 6.364444215841254,
+        "group": "active_site"
+      },
+      {
+        "id": "var_047",
+        "mutations": {
+          "207": "T",
+          "239": "D"
+        },
+        "num_mutations": 2,
+        "score": 6.356242730355703,
+        "group": "active_site"
+      },
+      {
+        "id": "var_042",
+        "mutations": {
+          "182": "D"
+        },
+        "num_mutations": 1,
+        "score": 6.347595713540755,
+        "group": "active_site"
+      },
+      {
+        "id": "var_029",
+        "mutations": {
+          "239": "F",
+          "183": "M",
+          "209": "W"
+        },
+        "num_mutations": 3,
+        "score": 6.343702654199833,
+        "group": "active_site"
+      },
+      {
+        "id": "var_011",
+        "mutations": {
+          "209": "M"
+        },
+        "num_mutations": 1,
+        "score": 6.3411766868038,
+        "group": "active_site"
+      },
+      {
+        "id": "var_041",
+        "mutations": {
+          "182": "D"
+        },
+        "num_mutations": 1,
+        "score": 6.323019116443747,
+        "group": "active_site"
+      },
+      {
+        "id": "var_039",
+        "mutations": {
+          "210": "Y"
+        },
+        "num_mutations": 1,
+        "score": 6.311243819553773,
+        "group": "active_site"
+      },
+      {
+        "id": "var_031",
+        "mutations": {
+          "210": "N"
+        },
+        "num_mutations": 1,
+        "score": 6.300024551638482,
+        "group": "active_site"
+      },
+      {
+        "id": "var_034",
+        "mutations": {
+          "182": "E",
+          "239": "Y",
+          "208": "G"
+        },
+        "num_mutations": 3,
+        "score": 6.298306653836359,
+        "group": "active_site"
+      },
+      {
+        "id": "var_030",
+        "mutations": {
+          "184": "H",
+          "183": "Y",
+          "203": "W"
+        },
+        "num_mutations": 3,
+        "score": 6.291448667122903,
+        "group": "active_site"
+      },
+      {
+        "id": "var_028",
+        "mutations": {
+          "183": "A",
+          "208": "L"
+        },
+        "num_mutations": 2,
+        "score": 6.290531212630192,
+        "group": "active_site"
+      },
+      {
+        "id": "var_025",
+        "mutations": {
+          "183": "E",
+          "236": "R",
+          "207": "R"
+        },
+        "num_mutations": 3,
+        "score": 6.262989314049148,
+        "group": "active_site"
+      },
+      {
+        "id": "var_019",
+        "mutations": {
+          "182": "N",
+          "184": "I"
+        },
+        "num_mutations": 2,
+        "score": 6.258910633195845,
+        "group": "active_site"
+      },
+      {
+        "id": "var_049",
+        "mutations": {
+          "184": "I"
+        },
+        "num_mutations": 1,
+        "score": 6.237813990114534,
+        "group": "active_site"
+      },
+      {
+        "id": "var_048",
+        "mutations": {
+          "236": "D",
+          "239": "R",
+          "182": "N"
+        },
+        "num_mutations": 3,
+        "score": 6.234638542798442,
+        "group": "active_site"
+      },
+      {
+        "id": "var_002",
+        "mutations": {
+          "182": "E",
+          "236": "S",
+          "209": "D"
+        },
+        "num_mutations": 3,
+        "score": 6.221761780246352,
+        "group": "active_site"
+      },
+      {
+        "id": "var_007",
+        "mutations": {
+          "207": "G",
+          "203": "I",
+          "202": "N"
+        },
+        "num_mutations": 3,
+        "score": 6.1989928074366505,
+        "group": "active_site"
+      },
+      {
+        "id": "var_013",
+        "mutations": {
+          "184": "K",
+          "202": "F",
+          "182": "R"
+        },
+        "num_mutations": 3,
+        "score": 6.19135190332514,
+        "group": "active_site"
+      },
+      {
+        "id": "var_020",
+        "mutations": {
+          "208": "T",
+          "207": "G",
+          "236": "L"
+        },
+        "num_mutations": 3,
+        "score": 6.187289506443441,
+        "group": "active_site"
+      },
+      {
+        "id": "var_027",
+        "mutations": {
+          "209": "N",
+          "202": "F",
+          "236": "M"
+        },
+        "num_mutations": 3,
+        "score": 6.126015563827545,
+        "group": "active_site"
+      },
+      {
+        "id": "var_018",
+        "mutations": {
+          "203": "D",
+          "159": "N",
+          "184": "R"
+        },
+        "num_mutations": 3,
+        "score": 6.119344593734728,
+        "group": "active_site"
+      },
+      {
+        "id": "var_021",
+        "mutations": {
+          "184": "Y"
+        },
+        "num_mutations": 1,
+        "score": 6.088397116271517,
+        "group": "active_site"
+      },
+      {
+        "id": "var_008",
+        "mutations": {
+          "182": "R"
+        },
+        "num_mutations": 1,
+        "score": 6.06462898242878,
+        "group": "active_site"
+      },
+      {
+        "id": "var_050",
+        "mutations": {
+          "209": "T"
+        },
+        "num_mutations": 1,
+        "score": 6.029672996306823,
+        "group": "active_site"
+      },
+      {
+        "id": "var_014",
+        "mutations": {
+          "208": "Q",
+          "236": "H"
+        },
+        "num_mutations": 2,
+        "score": 6.024402492369535,
+        "group": "active_site"
+      },
+      {
+        "id": "var_022",
+        "mutations": {
+          "202": "S",
+          "238": "R",
+          "210": "Q"
+        },
+        "num_mutations": 3,
+        "score": 6.0230869307895,
+        "group": "active_site"
+      },
+      {
+        "id": "var_005",
+        "mutations": {
+          "184": "Y",
+          "238": "S",
+          "236": "K"
+        },
+        "num_mutations": 3,
+        "score": 6.004593689936705,
+        "group": "active_site"
+      },
+      {
+        "id": "var_009",
+        "mutations": {
+          "203": "Q"
+        },
+        "num_mutations": 1,
+        "score": 5.9126358211825725,
+        "group": "active_site"
+      },
+      {
+        "id": "var_024",
+        "mutations": {
+          "182": "F",
+          "159": "G"
+        },
+        "num_mutations": 2,
+        "score": 5.876928758297411,
+        "group": "active_site"
+      },
+      {
+        "id": "var_016",
+        "mutations": {
+          "236": "K",
+          "183": "H",
+          "209": "T"
+        },
+        "num_mutations": 3,
+        "score": 5.84639955463421,
+        "group": "active_site"
+      },
+      {
+        "id": "var_037",
+        "mutations": {
+          "238": "R",
+          "184": "Q",
+          "202": "T"
+        },
+        "num_mutations": 3,
+        "score": 5.814083137432355,
+        "group": "active_site"
+      },
+      {
+        "id": "var_046",
+        "mutations": {
+          "236": "S"
+        },
+        "num_mutations": 1,
+        "score": 5.7710253569218155,
+        "group": "active_site"
+      },
+      {
+        "id": "var_038",
+        "mutations": {
+          "208": "K",
+          "182": "E",
+          "184": "N"
+        },
+        "num_mutations": 3,
+        "score": 5.576395747714864,
+        "group": "active_site"
+      },
+      {
+        "id": "var_040",
+        "mutations": {
+          "210": "K"
+        },
+        "num_mutations": 1,
+        "score": 5.469785197456897,
+        "group": "active_site"
+      }
+    ],
+    "stats": {
+      "mean": 6.313614874447057,
+      "std": 0.3626007630846808,
+      "best": 7.156139251445255,
+      "median": 6.294877660479631
+    }
+  },
+  "allosteric": {
+    "variants": [
+      {
+        "id": "var_018",
+        "mutations": {
+          "145": "Y",
+          "35": "I",
+          "33": "W"
+        },
+        "num_mutations": 3,
+        "score": 8.167106641650886,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_040",
+        "mutations": {
+          "59": "L",
+          "33": "Q"
+        },
+        "num_mutations": 2,
+        "score": 7.583252674621137,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_025",
+        "mutations": {
+          "51": "I",
+          "266": "L",
+          "74": "W"
+        },
+        "num_mutations": 3,
+        "score": 7.521823758468932,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_033",
+        "mutations": {
+          "35": "Y",
+          "75": "S",
+          "293": "G"
+        },
+        "num_mutations": 3,
+        "score": 7.482664052539852,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_048",
+        "mutations": {
+          "73": "M",
+          "151": "W",
+          "36": "M"
+        },
+        "num_mutations": 3,
+        "score": 7.349083948600585,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_013",
+        "mutations": {
+          "33": "R",
+          "152": "F",
+          "53": "K"
+        },
+        "num_mutations": 3,
+        "score": 7.188531413961627,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_021",
+        "mutations": {
+          "72": "W",
+          "148": "A",
+          "150": "Y"
+        },
+        "num_mutations": 3,
+        "score": 7.179208000157158,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_045",
+        "mutations": {
+          "50": "S",
+          "58": "A",
+          "31": "W"
+        },
+        "num_mutations": 3,
+        "score": 7.177803059216967,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_032",
+        "mutations": {
+          "31": "I",
+          "75": "K"
+        },
+        "num_mutations": 2,
+        "score": 7.167927684182642,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_010",
+        "mutations": {
+          "73": "V",
+          "32": "W",
+          "146": "W"
+        },
+        "num_mutations": 3,
+        "score": 7.123236697961704,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_050",
+        "mutations": {
+          "135": "R"
+        },
+        "num_mutations": 1,
+        "score": 7.103999869233947,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_029",
+        "mutations": {
+          "29": "G",
+          "36": "Y",
+          "33": "D"
+        },
+        "num_mutations": 3,
+        "score": 7.078905361803144,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_049",
+        "mutations": {
+          "135": "M",
+          "73": "Y",
+          "78": "G"
+        },
+        "num_mutations": 3,
+        "score": 7.051427474787153,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_020",
+        "mutations": {
+          "71": "T",
+          "39": "Y"
+        },
+        "num_mutations": 2,
+        "score": 7.046605376986536,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_042",
+        "mutations": {
+          "58": "H"
+        },
+        "num_mutations": 1,
+        "score": 6.976505803878025,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_008",
+        "mutations": {
+          "267": "V",
+          "144": "G",
+          "151": "I"
+        },
+        "num_mutations": 3,
+        "score": 6.8705133396702385,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_003",
+        "mutations": {
+          "35": "Y",
+          "32": "A",
+          "150": "E"
+        },
+        "num_mutations": 3,
+        "score": 6.805854514658099,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_027",
+        "mutations": {
+          "31": "N",
+          "29": "G"
+        },
+        "num_mutations": 2,
+        "score": 6.77450264890992,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_022",
+        "mutations": {
+          "151": "G",
+          "35": "L"
+        },
+        "num_mutations": 2,
+        "score": 6.757054593519481,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_046",
+        "mutations": {
+          "152": "I",
+          "267": "Q",
+          "291": "S"
+        },
+        "num_mutations": 3,
+        "score": 6.6904319113278845,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_014",
+        "mutations": {
+          "147": "E",
+          "31": "S",
+          "148": "W"
+        },
+        "num_mutations": 3,
+        "score": 6.6691820128218895,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_044",
+        "mutations": {
+          "147": "F",
+          "141": "R"
+        },
+        "num_mutations": 2,
+        "score": 6.647447768674344,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_034",
+        "mutations": {
+          "39": "H"
+        },
+        "num_mutations": 1,
+        "score": 6.627826065391705,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_028",
+        "mutations": {
+          "58": "T",
+          "39": "Y",
+          "291": "S"
+        },
+        "num_mutations": 3,
+        "score": 6.592079130218206,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_007",
+        "mutations": {
+          "58": "M",
+          "138": "S"
+        },
+        "num_mutations": 2,
+        "score": 6.574242961134369,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_043",
+        "mutations": {
+          "58": "S",
+          "31": "Q",
+          "35": "N"
+        },
+        "num_mutations": 3,
+        "score": 6.530616855337064,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_001",
+        "mutations": {
+          "136": "H"
+        },
+        "num_mutations": 1,
+        "score": 6.481388669555692,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_038",
+        "mutations": {
+          "138": "Q"
+        },
+        "num_mutations": 1,
+        "score": 6.476935543760151,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_037",
+        "mutations": {
+          "139": "K"
+        },
+        "num_mutations": 1,
+        "score": 6.4750541898629805,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_016",
+        "mutations": {
+          "78": "M",
+          "37": "T"
+        },
+        "num_mutations": 2,
+        "score": 6.471970920958789,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_011",
+        "mutations": {
+          "32": "W"
+        },
+        "num_mutations": 1,
+        "score": 6.470952698045816,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_047",
+        "mutations": {
+          "151": "N"
+        },
+        "num_mutations": 1,
+        "score": 6.435050737775169,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_012",
+        "mutations": {
+          "49": "E"
+        },
+        "num_mutations": 1,
+        "score": 6.422540896452955,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_031",
+        "mutations": {
+          "31": "M"
+        },
+        "num_mutations": 1,
+        "score": 6.35823372972507,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_041",
+        "mutations": {
+          "141": "Y",
+          "78": "N",
+          "152": "A"
+        },
+        "num_mutations": 3,
+        "score": 6.333361351079136,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_035",
+        "mutations": {
+          "30": "N",
+          "49": "S"
+        },
+        "num_mutations": 2,
+        "score": 6.332238104390162,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_024",
+        "mutations": {
+          "59": "M"
+        },
+        "num_mutations": 1,
+        "score": 6.313845688526716,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_036",
+        "mutations": {
+          "291": "H",
+          "53": "F",
+          "59": "R"
+        },
+        "num_mutations": 3,
+        "score": 6.304980325959399,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_023",
+        "mutations": {
+          "35": "Y"
+        },
+        "num_mutations": 1,
+        "score": 6.274076903167793,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_026",
+        "mutations": {
+          "58": "E",
+          "32": "S"
+        },
+        "num_mutations": 2,
+        "score": 6.272350358617364,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_039",
+        "mutations": {
+          "52": "I",
+          "30": "R"
+        },
+        "num_mutations": 2,
+        "score": 6.264955623175033,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_006",
+        "mutations": {
+          "77": "A"
+        },
+        "num_mutations": 1,
+        "score": 6.262929926087981,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_004",
+        "mutations": {
+          "39": "S"
+        },
+        "num_mutations": 1,
+        "score": 6.098479444442241,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_005",
+        "mutations": {
+          "139": "R",
+          "51": "D"
+        },
+        "num_mutations": 2,
+        "score": 6.083115835450778,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_030",
+        "mutations": {
+          "146": "G",
+          "144": "S"
+        },
+        "num_mutations": 2,
+        "score": 6.063641142091411,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_009",
+        "mutations": {
+          "51": "Y",
+          "32": "D"
+        },
+        "num_mutations": 2,
+        "score": 6.028384651193472,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_002",
+        "mutations": {
+          "138": "E",
+          "53": "T"
+        },
+        "num_mutations": 2,
+        "score": 5.993751521580852,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_017",
+        "mutations": {
+          "292": "A",
+          "33": "T"
+        },
+        "num_mutations": 2,
+        "score": 5.967953560883318,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_015",
+        "mutations": {
+          "58": "N",
+          "51": "K"
+        },
+        "num_mutations": 2,
+        "score": 5.80538491375537,
+        "group": "allosteric"
+      },
+      {
+        "id": "var_019",
+        "mutations": {
+          "37": "E",
+          "75": "K"
+        },
+        "num_mutations": 2,
+        "score": 5.797384346269342,
+        "group": "allosteric"
+      }
+    ],
+    "stats": {
+      "mean": 6.650535894050409,
+      "std": 0.49878686176762993,
+      "best": 8.167106641650886,
+      "median": 6.552429908235716
+    }
+  },
+  "comparison": {
+    "improvement_pct": 5.336420201475457,
+    "t_statistic": 3.8245598162392214,
+    "p_value": 0.00023046424573339608,
+    "significant": true
+  }
+}
