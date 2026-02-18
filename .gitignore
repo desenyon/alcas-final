@@ -1,24 +1,29 @@
-# Python
+# Data directories (too large for git)
+data/raw/
+data/graphs/
+data/esm_embeddings/
+data/processed/esm2_embeddings/
+
+# Large model checkpoints
+results/models/*/seed_*/
+results/models/hybrid/
+results/models/physics_informed/
+results/models/transfer_learning/
+
+# Temporary files
 __pycache__/
 *.pyc
 *.pyo
-*.egg-info/
-.pytest_cache/
-
-# Data (too large for git)
-data/raw/
-data/graphs/
-*.pt
-*.pdb
-
-# Results (can regenerate)
-results/models/affinity/*/best_model.pt
-results/validation/md/
-
-# Logs
-*.log
-nohup.out
-
-# Environment
-.env
+.ipynb_checkpoints/
 *.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Conda/virtual env
+venv/
+env/
+.conda/

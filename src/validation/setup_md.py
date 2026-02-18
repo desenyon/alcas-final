@@ -1,5 +1,6 @@
 """
-Setup MD simulations for top variants
+Setup GPU-accelerated MD simulations for top variants
+OpenCL-compatible (no bonded GPU flag)
 """
 
 import json
@@ -13,7 +14,7 @@ OUTPUT_DIR = Path("results/validation/md")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 print("="*70)
-print("MD SIMULATION SETUP")
+print("MD SIMULATION SETUP (GPU-ACCELERATED)")
 print("="*70)
 
 # Load selection
@@ -27,21 +28,18 @@ print(f"\nPreparing MD for {len(variants)} variants")
 MD_CONFIG = {
     'force_field': 'amber99sb-ildn',
     'water_model': 'tip3p',
-    'box_type': 'cubic',
-    'box_distance': 1.0,  # nm from protein
-    'ion_concentration': 0.15,  # M (physiological)
+    'box_distance': 1.0,  # nm
+    'ion_concentration': 0.15,  # M
     'temperature': 300,  # K
     'pressure': 1.0,  # bar
-    'equilibration_time': 1.0,  # ns
     'production_time': 50.0,  # ns
-    'timestep': 0.002,  # ps (2 fs)
 }
 
 print("\nMD Parameters:")
 for key, value in MD_CONFIG.items():
     print(f"  {key}: {value}")
 
-# Create MDP files (GROMACS parameter files)
+# Create MDP files
 def create_mdp_files(variant_dir):
     """Create GROMACS parameter files"""
     
@@ -54,10 +52,7 @@ integrator  = steep
 emtol       = 1000.0
 emstep      = 0.01
 nsteps      = 50000
-nstlist     = 10
 cutoff-scheme = Verlet
-ns_type     = grid
-rlist       = 1.2
 coulombtype = PME
 rcoulomb    = 1.2
 vdwtype     = cutoff
@@ -72,17 +67,11 @@ pbc         = xyz
 ; NVT equilibration
 define      = -DPOSRES
 integrator  = md
-nsteps      = 500000  ; 1 ns
+nsteps      = 500000
 dt          = 0.002
-nstxout     = 5000
-nstvout     = 5000
 nstlog      = 5000
-nstcalcenergy = 100
-nstenergy   = 1000
+nstenergy   = 5000
 cutoff-scheme = Verlet
-ns_type     = grid
-nstlist     = 10
-rlist       = 1.2
 coulombtype = PME
 rcoulomb    = 1.2
 vdwtype     = cutoff
@@ -95,7 +84,6 @@ pcoupl      = no
 pbc         = xyz
 gen_vel     = yes
 gen_temp    = {MD_CONFIG['temperature']}
-gen_seed    = -1
 """)
     
     # NPT equilibration
@@ -105,17 +93,11 @@ gen_seed    = -1
 ; NPT equilibration
 define      = -DPOSRES
 integrator  = md
-nsteps      = 500000  ; 1 ns
+nsteps      = 500000
 dt          = 0.002
-nstxout     = 5000
-nstvout     = 5000
 nstlog      = 5000
-nstcalcenergy = 100
-nstenergy   = 1000
+nstenergy   = 5000
 cutoff-scheme = Verlet
-ns_type     = grid
-nstlist     = 10
-rlist       = 1.2
 coulombtype = PME
 rcoulomb    = 1.2
 vdwtype     = cutoff
@@ -125,7 +107,6 @@ tc-grps     = Protein Non-Protein
 tau_t       = 0.1 0.1
 ref_t       = {MD_CONFIG['temperature']} {MD_CONFIG['temperature']}
 pcoupl      = Parrinello-Rahman
-pcoupltype  = isotropic
 tau_p       = 2.0
 ref_p       = {MD_CONFIG['pressure']}
 compressibility = 4.5e-5
@@ -138,20 +119,12 @@ pbc         = xyz
         f.write(f"""
 ; Production MD
 integrator  = md
-nsteps      = 25000000  ; 50 ns
+nsteps      = 25000000
 dt          = 0.002
-nstxout     = 0
-nstvout     = 0
-nstfout     = 0
-nstxout-compressed = 5000  ; Save every 10 ps
-compressed-x-grps = Protein
+nstxout-compressed = 5000
 nstlog      = 5000
-nstcalcenergy = 100
 nstenergy   = 5000
 cutoff-scheme = Verlet
-ns_type     = grid
-nstlist     = 10
-rlist       = 1.2
 coulombtype = PME
 rcoulomb    = 1.2
 vdwtype     = cutoff
@@ -161,67 +134,72 @@ tc-grps     = Protein Non-Protein
 tau_t       = 0.1 0.1
 ref_t       = {MD_CONFIG['temperature']} {MD_CONFIG['temperature']}
 pcoupl      = Parrinello-Rahman
-pcoupltype  = isotropic
 tau_p       = 2.0
 ref_p       = {MD_CONFIG['pressure']}
 compressibility = 4.5e-5
 pbc         = xyz
 """)
 
-# Create run script
+# Create GPU-enabled run script (OpenCL compatible - no bonded GPU)
 def create_run_script(variant_dir, variant_id):
-    """Create bash script to run MD"""
+    """Create bash script with GPU flags compatible with OpenCL build"""
     
-    script = variant_dir / "run_md.sh"
+    script = variant_dir / "run_md_gpu.sh"
     with open(script, 'w') as f:
         f.write(f"""#!/bin/bash
-# MD simulation for {variant_id}
+# GPU-Accelerated MD for {variant_id}
+# OpenCL build: nb, pme, update on GPU; bonded on CPU
 
 set -e
 
+echo "=========================================="
 echo "Starting MD for {variant_id}"
+echo "Time: $(date)"
+echo "=========================================="
 
-# 1. Prepare system
-echo "Step 1: Processing structure..."
+# 1. Process structure
+echo "[1/8] Processing structure..."
 gmx pdb2gmx -f input.pdb -o processed.gro -water tip3p -ff amber99sb-ildn -ignh
 
-# 2. Define box
-echo "Step 2: Defining box..."
+# 2. Create box
+echo "[2/8] Creating box..."
 gmx editconf -f processed.gro -o boxed.gro -c -d 1.0 -bt cubic
 
 # 3. Solvate
-echo "Step 3: Solvating..."
+echo "[3/8] Solvating..."
 gmx solvate -cp boxed.gro -cs spc216.gro -o solvated.gro -p topol.top
 
 # 4. Add ions
-echo "Step 4: Adding ions..."
+echo "[4/8] Adding ions..."
 gmx grompp -f em.mdp -c solvated.gro -p topol.top -o ions.tpr -maxwarn 1
 echo "SOL" | gmx genion -s ions.tpr -o ionized.gro -p topol.top -pname NA -nname CL -neutral -conc 0.15
 
-# 5. Energy minimization
-echo "Step 5: Energy minimization..."
+# 5. Energy minimization (CPU - steep integrator)
+echo "[5/8] Energy minimization..."
 gmx grompp -f em.mdp -c ionized.gro -p topol.top -o em.tpr -maxwarn 1
 gmx mdrun -v -deffnm em
 
-# 6. NVT equilibration
-echo "Step 6: NVT equilibration..."
+# 6. NVT equilibration (GPU: nb, pme, update)
+echo "[6/8] NVT equilibration (GPU)..."
 gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr -maxwarn 1
-gmx mdrun -v -deffnm nvt
+gmx mdrun -v -deffnm nvt -nb gpu -pme gpu -update gpu
 
-# 7. NPT equilibration
-echo "Step 7: NPT equilibration..."
+# 7. NPT equilibration (GPU: nb, pme, update)
+echo "[7/8] NPT equilibration (GPU)..."
 gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr -maxwarn 1
-gmx mdrun -v -deffnm npt
+gmx mdrun -v -deffnm npt -nb gpu -pme gpu -update gpu
 
-# 8. Production MD
-echo "Step 8: Production MD (50 ns)..."
+# 8. Production MD (GPU: nb, pme, update)
+echo "[8/8] Production MD - 50ns (GPU)..."
 gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md.tpr -maxwarn 1
-gmx mdrun -v -deffnm md -nb gpu
+gmx mdrun -v -deffnm md -nb gpu -pme gpu -update gpu
 
-echo "MD complete for {variant_id}!"
+echo "=========================================="
+echo "✓ MD COMPLETE for {variant_id}"
+echo "Time: $(date)"
+echo "=========================================="
 """)
     
-    # Make executable
     script.chmod(0o755)
 
 # Setup each variant
@@ -246,65 +224,98 @@ for variant in variants:
     
     # Create run script
     create_run_script(variant_dir, variant_id)
-    print(f"  ✓ Created run script")
+    print(f"  ✓ Created GPU run script")
 
-# Create master launch script
-print("\nCreating master launch script...")
+# Create launch script
+print("\nCreating launch script...")
 
 launch_script = OUTPUT_DIR / "launch_all.sh"
 with open(launch_script, 'w') as f:
     f.write("""#!/bin/bash
-# Launch all MD simulations in parallel
+# Launch all GPU-accelerated MD simulations
 
-echo "Launching MD simulations..."
+cd $(dirname $0)
+
+echo "=========================================="
+echo "Launching MD Simulations"
+echo "Time: $(date)"
+echo "=========================================="
+echo ""
 
 """)
     
     for variant in variants:
         variant_id = f"{variant['group']}_{variant['id']}"
         f.write(f"""
+# Launch {variant_id}
 cd {variant_id}
-nohup bash run_md.sh > md.log 2>&1 &
+nohup bash run_md_gpu.sh > md.log 2>&1 &
+PID=$!
+echo "Started {variant_id} (PID: $PID)"
 cd ..
 """)
     
     f.write("""
+echo ""
+echo "=========================================="
 echo "All simulations launched!"
-echo "Monitor progress: tail -f */md.log"
-echo "Check status: ps aux | grep mdrun"
+echo "=========================================="
+echo ""
+echo "Monitor progress:"
+echo "  tail -f */md.log"
+echo "  watch -n 10 nvidia-smi"
+echo ""
+echo "Check completion:"
+echo "  bash monitor.sh"
 """)
 
 launch_script.chmod(0o755)
-
-print(f"✓ Created: {launch_script}")
 
 # Create monitoring script
 monitor_script = OUTPUT_DIR / "monitor.sh"
 with open(monitor_script, 'w') as f:
     f.write("""#!/bin/bash
-# Monitor MD progress
+# Monitor MD simulation progress
 
+cd $(dirname $0)
+
+echo "=========================================="
 echo "MD Simulation Status"
-echo "===================="
+echo "Time: $(date)"
+echo "=========================================="
+echo ""
+
 for dir in active_* allosteric_*; do
-    if [ -f "$dir/md.log" ]; then
-        echo "$dir:"
-        tail -n 3 "$dir/md.log" | grep -E "Step|Time|Performance" || echo "  Starting..."
+    if [ -d "$dir" ]; then
+        echo "[$dir]"
+        if [ -f "$dir/md.log" ]; then
+            # Get last step info
+            tail -10 "$dir/md.log" | grep -E "Step|Performance|will finish" | tail -3 || echo "  Running..."
+        else
+            echo "  Not started"
+        fi
+        echo ""
     fi
 done
+
+echo "=========================================="
+echo "GPU Status:"
+nvidia-smi | grep -A 2 "GPU.*Util"
 """)
 
 monitor_script.chmod(0o755)
 
+print(f"\n✓ Created: {launch_script}")
 print(f"✓ Created: {monitor_script}")
 
 print("\n" + "="*70)
 print("MD SETUP COMPLETE")
 print("="*70)
+print(f"\nDirectory: {OUTPUT_DIR}")
 print(f"\nTo launch all simulations:")
 print(f"  cd {OUTPUT_DIR}")
 print(f"  bash launch_all.sh")
-print(f"\nTo monitor progress:")
+print(f"\nTo monitor:")
 print(f"  bash monitor.sh")
-print(f"\nEstimated time: 12-18 hours (running in parallel)")
+print(f"\nEstimated time: 6-8 hours per simulation (with GPU)")
 print("="*70)

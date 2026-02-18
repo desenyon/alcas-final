@@ -1,0 +1,16 @@
+{
+  "matrix_shape": [
+    265,
+    20
+  ],
+  "best_overall": {
+    "position": 139,
+    "affinity": 6.99787196571339
+  },
+  "most_tolerant": {
+    "position": 206,
+    "std": 0.4882442356640899
+  },
+  "active_site_avg": 5.809708079777041,
+  "allosteric_avg": 6.199067375563757
+}
